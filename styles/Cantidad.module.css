@@ -1,0 +1,11 @@
+/* Cantidad.module.css */
+.cantidad_transition {
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.cantidad_animate {
+    color: #F59E0B;
+    font-weight: 700;
+    opacity: 0.5;
+    transform: scale(1.2);
+}
