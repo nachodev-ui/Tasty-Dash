@@ -1,0 +1,36 @@
+.button {
+    background-color: #F59E0B;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    border-radius: 3px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    margin-top: 1.2rem;
+    width: fit-content;
+}
+
+@media (max-width: 768px) {
+    .button {
+        width: 100%;
+    }
+}
+
+
+.button:hover {
+    background-color: #FBBF24;
+}
+
+.buttonDisabled {
+    background-color: #ccc;
+    color: #000;
+    cursor: not-allowed;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    opacity: 0.5;
+    pointer-events: none;
+}
