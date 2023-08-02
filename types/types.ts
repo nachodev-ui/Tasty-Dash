@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 // Types for interfaces
 import { SyntheticEvent } from 'react'
 import { Categoria, Producto } from '@prisma/client'
@@ -48,5 +50,4 @@ export type HandleEliminarProductoFn = (id: number) => void
 
 export type HandleEnviarPedidoFn = (e: SyntheticEvent) => Promise<void>
 
-// eslint-disable-next-line no-unused-vars
 export type HandleAgregarPedidoFn = (producto: ProductoConCantidad, cantidad: number) => void
