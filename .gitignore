@@ -38,6 +38,3 @@ customType.d.ts
 
 # prisma
 /prisma/migrations
-
-# images
-preview.png
