@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import { Categoria as ICategoria } from '@/types/interfaces'
 import useKiosko from '@/hooks/useKiosko'
+import { Categoria } from '@prisma/client'
 
-const Categoria = ({ categoria }: { categoria: ICategoria }) => {
+const Categoria = ({ categoria }: { categoria: Categoria }) => {
   const { id, nombre, icono } = categoria
 
   const { categoriaActual, obtenerCategoriaActual } = useKiosko()
@@ -18,14 +18,14 @@ const Categoria = ({ categoria }: { categoria: ICategoria }) => {
       <Image
         width={70}
         height={70}
-        src={`/assets/img/icono_${ icono }.svg`}
-        alt={`Imagen ícono ${ nombre }`}
+        src={`/assets/img/icono_${icono}.svg`}
+        alt={`Imagen ícono ${nombre}`}
         className="hover:cursor-pointer"
       />
 
       <button
         type="button"
-        className="text-3xl hover:cursor-pointer hover:font-bold"
+        className="text-xl md:text-2xl xl:text-3xl hover:cursor-pointer hover:font-bold"
         onClick={() => obtenerCategoriaActual(id)}
       >
         {nombre}
