@@ -12,4 +12,4 @@ pnpm dev
 
 ## Preview
 
-![Preview](./Tasty%20Dash%20.png)
+![Preview](./preview.png)
