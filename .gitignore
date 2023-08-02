@@ -34,6 +34,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+customType.d.ts
 
 # prisma
 /prisma/migrations
+
+# images
+preview.png
