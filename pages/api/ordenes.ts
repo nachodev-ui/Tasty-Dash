@@ -1,15 +1,22 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { PrismaClient } from '@prisma/client'
+import { PrismaClient, Orden } from '@prisma/client'
 
 const prisma = new PrismaClient()
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method === 'POST') {
+export default async function handler(req: NextApiRequest, res: NextApiResponse<Orden[] | Orden>) {
 
-    const orden = await prisma.orden.create({
+  // GET
+  const ordenes: Orden[] = await prisma.orden.findMany({
+    where: {
+      estado: false
+    },
+  })
+  res.status(200).json(ordenes)
+
+
+  // POST
+  if (req.method === 'POST') {
+    const orden: Orden = await prisma.orden.create({
       data: {
         nombre: req.body.nombre,
         total: req.body.total,
